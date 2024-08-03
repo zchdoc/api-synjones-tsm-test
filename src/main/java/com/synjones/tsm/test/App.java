@@ -1,0 +1,17 @@
+package com.synjones.tsm.test;
+/**
+ * Hello world!
+ */
+public class App {
+  public static void main(String[] args) {
+    String DES_KEY = "QGFQ+XlMjc9x96TrwZ00r85NJNOn+KZv";
+    String DESede = "DESede";
+    String APP_KEY = "E103BAFE6820ACD80AF71961A343F16E";
+    String PRI_KEY = "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCkD/X2vbLV3WVGRb5RqbwAA4rkj8a+tgikHOEhJCsWJtQIBZxQYO/Lde2uE0v4dZlO8NI26sJquc+9XA+cmqEzBHi1Gp5DdGoMz+Q0X9XjoYW5QUjEAG0+APxBrXLVz+CiGp8TMk0bcer9tZIJZTHNhcCfv8srgXDRpHl1EazaxSmv5bQieuEGaK2mm8eizFia46QdRCp+3PS1BPeyybLSgfYSoHcyegERPCJwMYFs0mwW2ahZy6Mhdd/e+DXy8paW6jalFIZNnQbrvEsasDqlzBN+5iUna7lcDbSNPyaC9Zp2Tpy5KifrmH2yFJJbOBtQ9S91+1XiXpIaNv/6GKh5AgMBAAECggEAVlXv4gDB87mmaeyZ0u+3d2pl1RG0TPgOZA6uino2ElosimwpbkMU7cUJZunQuNdp7hjdBvlThkZyA/xGWuskmWxo+SUg0+6XQFbGiKlGLZv6exrX6A0xb8ek+AsGu23BkIzh2YBHA4JXX1wFldwi8TzJuUd861Aaxrf/EpRSmmz/J3sIY5bbB/I4Gy0WlrsM5GErePfw6ttshIDH6mLzCTMZ54jea6l4uCuQbVOin8yRc8PTjWgLocxIsb5dEghaI7EoPm5gcd3toVHwGHmc3eiSgSBXDvo23qmtC4N4wEhsSUp6m/bWeqbP21gUfNV2my7lqIOEAs2vXrivDNivgQKBgQDXJzJnI+51asWuIjqTKLJqczAIM2PDgmuoIX/oXjY6YWthRzMlpPhux0J4JjBHFhrFFwGLImu9mPWVzDdALVxTBNJlKf4bLLCzD3Xf/ml861BFzIyY+b7Ol1Xn4XhO2cvz91G7zq6K4jbJD7ydLdhOZhAyaQHebsdSi3ipwn4wxQKBgQDDNaqw8jPUyLqSoMkcsgcjbQQS9efuD8TqPRQFcwSsbjE4nNml9jL5qZwDiPrf0EfD+c6tY5aUo9FjU16SPjaB88DpakrcqsNbaFzayrsXlBTy+gEBlWh2595e8768FEfm2r5g9QrTt6Gkd0qZCauqluLYLaBbyqI3zhrQB67sJQKBgQCoYZrGsY48AnX3E/63kNAhE0jyAhX/uqA6kw0hdCoIgpmhJjHXMkbjm7pfgbOizp/gw2KH20ZqubzpoUtURKvOpSVr2vNtnQok+OKNjPRNuXO3TKB0UHCOCk5HDWQ0gatmoZYr31MmimfJ7zDz6h8xLBtc+GVoCVahOVoTsY1E6QKBgQC+KS9oQ+jd5dRqNhrzyzFM/0uytL4EmHP4wxsX2923o3hrb9BN7bHmp6UFhJDvKlRewqDlI1hy38p/+Zzs1ZH/sdZBC3x1zhuUleuub0MmSujFcWk9g7BJ9MIYuVUanp8Ucg53IP41FHNwZYzT3CnQej/s2zWVdaXkuvA/qtxpyQKBgHlv+4IsWWjC9fcfgbpnuv3SIMSoKfX45M6wZlM7jmQfRX8uyoMZyricKag6ItseoyZ/rrcOLEKKck/ylTXjoTMhhKDhXJs8xnB9JG6qOHKgkwMIyRhCA2FQ8f/eVKckhBh43bHQ1laFEUEKrEomorTz2uMtA5gOwi/5umuoosn0";
+    String ALGORITHM = "SHA1withRSA";
+    String TSM_URL = "http://172.16.11.27:8899/onecard/uap/gateway.action";
+    String PUB_KEY_SELF = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlqfmuuI30TrS12sOMWHOKUYvnZ5z9bHs1smeTef1a7AEgN8UAEmIlhUJl8KrnNVaZ9EdYTc+fzd4ILwqiK3laCngtXQT/vfDKXAdquY9Ydfytc0C/d0W0s0Qe0sVlOEAWpWSHgZNrlNtRn6MHDgXNexAPlzdY/jX57Aw7O4qlTYI56nOEwywhz7gJo6gpdjE+KcIXbb0LyPLE7PhwkvQh0UUQs+g4Ty2oOFstpB8Qou6eWJDIFFH7dGP/AZNwo3iEoIy2Ye52zB9D/IOk2seahc6cKBGlICRlPqwI3Pqg05ZKqa50WHYeaiDrfxYI/rY0XJ/V2MFAPi2/K6+DlLLwQIDAQAB";
+    String test = GetAccessToken.getAccessToken(DES_KEY, DESede, APP_KEY, PRI_KEY, ALGORITHM, TSM_URL, PUB_KEY_SELF);
+    System.out.println("test=" + test);
+  }
+}
